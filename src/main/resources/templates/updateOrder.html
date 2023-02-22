@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>UpdateOrder</h2>
+<label for="oNo">Enter OrderNo:</label><br>
+<input type="text" id="oNo" name="oNo" value=""><br><br>
+
+<button id="submit" class="btn btn-primary">Submit</button>
+<input type="submit" value="Submit">
+
+</body>
+<script>
+$('#submit').click(function() {
+var orderNo =$("#orderNo").html();
+    window.location.href = "/order/view/{orderNo}?orderNo=" + $("#orderNo").html();
+}
+
+</script>
+</html>
