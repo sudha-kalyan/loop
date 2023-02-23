@@ -164,26 +164,18 @@ console.log($("#amount").val());
 
     // add prod start
     $("#addProduct").click(function() {
-        var table = document.getElementById("productTable");
-        var row = table.insertRow(-1);
-        var product = row.insertCell(0);
-        var qty = row.insertCell(1);
-        var unitrate = row.insertCell(2);
-        var disc = row.insertCell(3);
-        var amt = row.insertCell(4);
-        var ttl = row.insertCell(5);
 
-<!--                <a th:href = "@{/orders/{id}(id=${order.id})}"-->
-<!--                   class = "btn btn-danger">Delete</a>-->
+        var product = $("#product").val();
+        var qty = $("#qty").val();
+        var unitRate = $("#commonPrice").html();
+        var disc = $("#disc").val();
+        var amt = $("#amt").html();
+        var totAmt = $("#totalPrice").html();
 
-
-        product.innerHTML = $("#product").val();
-        qty.innerHTML = ($("#qty").val());
-        unitrate.innerHTML = ($("#commonPrice").html());
-<!--       disc.innerHTML = ($("#disc").val()) * ($("#qty").val());-->
-        disc.innerHTML = ($("#disc").val());
-        amt.innerHTML = ($("#amt").html());
-        ttl.innerHTML = ($("#totalPrice").html());
+$("#productTable").append('<tr><td>'+product+'</td><td>'+qty+'</td><td>'+unitRate+'</td><td>'+disc+'</td><td>'+amt+'</td><td>'+totAmt+'</td><td><a href="javascript:void(0);" class="remCF">Delete</a></td></tr>');
+$("#productTable").on('click','.remCF',function(){
+        $(this).parent().parent().remove();
+    });
 
     });
     // add prod end

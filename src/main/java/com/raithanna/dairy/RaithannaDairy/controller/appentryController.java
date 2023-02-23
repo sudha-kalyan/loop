@@ -25,7 +25,7 @@ public class appentryController {
     }
 
     @PostMapping("/register")
-    public String register(Model model,@ModelAttribute userModel user, HttpServletRequest request, HttpSession session){
+    public String register(Model model,@ModelAttribute userModel user, HttpServletRequest request){
         List<String> messages = new ArrayList<>();
 
 
