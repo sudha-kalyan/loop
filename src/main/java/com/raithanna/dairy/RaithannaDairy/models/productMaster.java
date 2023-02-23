@@ -29,8 +29,8 @@ public class productMaster {
     private String PCode;
     private String PName;
     private String prod_type;
-    private Date PStDate;
-    private Date PEndDate;
+    private String PStDate;
+    private String PEndDate;
     private double unitRate;
     private double qtyFrom;
     private double qtyto;
@@ -46,8 +46,8 @@ public class productMaster {
     private String prodQ;
     private String qtyL;
     private double gstPercent;
-    private Date GStDate;
-    private Date GEndDate;
+    private String GStDate;
+    private String GEndDate;
 
     public void mapToVariables(@NotNull Map product) throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
@@ -74,8 +74,8 @@ public class productMaster {
         this.gstPercent = Double.parseDouble(product.get("gstPercent").toString());
 
         // Dates
-        this.PStDate = formatter.parse(product.get("PStDate").toString());
-        this.PEndDate = formatter.parse(product.get("PEndDate").toString());
+       // this.PStDate = formatter.parse(product.get("PStDate").toString());
+        //this.PEndDate = formatter.parse(product.get("PEndDate").toString());
 //        this.GStDate = DateFormat.getDateInstance().parse(product.get("GStDate").toString());
 //        this.GEndDate = DateFormat.getDateInstance().parse(product.get("GEndDate").toString());
 
