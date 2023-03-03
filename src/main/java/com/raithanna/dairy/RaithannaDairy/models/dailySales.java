@@ -24,10 +24,10 @@ public class dailySales {
     private Integer id;
 
 
-    private Date date;
+    private LocalDate date;
     @CreationTimestamp
     @Column(updatable = false)
-    private LocalDateTime  creationDate;
+    private LocalDate  creationDate;
 
     @UpdateTimestamp
     @Column(insertable = false)

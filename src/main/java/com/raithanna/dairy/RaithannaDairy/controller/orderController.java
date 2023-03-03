@@ -255,6 +255,7 @@ public class orderController {
             }
 
             saleOrder so = saleOrderRepository.findByOrderNo(orderList.get(0).getOrderNo());
+            so.setDate(orderList.get(0).getDate());
             so.setCustCode(orderList.get(0).getCustCode());
             so.setDisc(orderList.get(0).getTotDisc());
             so.setAmount(orderList.get(0).getTotAmount());
@@ -329,7 +330,7 @@ public class orderController {
             so.setDisc(totalAmount-totalNetAmount);
             so.setAmount(totalAmount);
             so.setNetAmount(totalNetAmount);
-           //so.setDate(orderList.get(0).getDate());
+           so.setDate(orderList.get(0).getDate());
 
             saleOrderRepository.save(so);
 

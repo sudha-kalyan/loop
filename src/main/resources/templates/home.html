@@ -26,20 +26,68 @@
     transform: rotate(-90deg);
 }
 
+body {
+
+margin:0;
+
+height:100%;
+
+}
+<!--background-image{-->
+<!--background-image:url(C:\kalyan\jrtp\git practice\sudha.jpeg);-->
+<!--colour:red;-->
+<!--}-->
+<!--.container{-->
+<!--max-width:960px;-->
+<!--margin-left:auto;-->
+<!--margin-right:auto;-->
+<!--padding-left:1rem;-->
+<!--padding-right:1rem;-->
+<!--}-->
+
+div {
+
+background-image: url("sudha.jpg");
+
+background-repeat:no-repeat;
+
+background-size:cover;
+
+}
+
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+
+
   </style>
 
-    <link rel="stylesheet" th:href="@{/resources/css/style.css}" />
+
     <title>home</title>
 
 </head>
-<body style="background-color: orange;">
+<body style="background-color: #fff;">
+
+
 <div th:replace="fragments/navbar :: navbar_html"></div>
 <br>
-<div class="container">
-    <div th:replace="fragments/message :: message_html"></div>
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<!--<center>-->
+<!--    <img src="../static/image/RaithannaOLogo.jpg" width="500"-->
+<!--         th:src="@{image/RaithannaOLogo.jpg}"/>-->
+
+<!--</center>-->
 
 
 </body>
+
 </html>

@@ -25,7 +25,8 @@ public class saleOrder {
     private String custCode;
     @CreationTimestamp
     @Column(updatable = false)
-    private LocalDateTime date;
+    private LocalDate createDate;
+    private LocalDate date;
     private String shift;
 
     private Integer orderNo;

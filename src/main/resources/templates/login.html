@@ -7,47 +7,164 @@
 
     <meta charset="UTF-8">
 
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
     <title></title>
     <style>
-        #navigation,.navbar .navbar-default{
-  background-image: url("C:/Users/krao6/sudha.jpg");
+
+    input#phone{
+  width:400px;
+  border:1px solid cyan;
+  border-radius:3px
+  outline:0;
+  padding:7px;
+  background-colour:#fff;
+
+  }
+  input#inputPassword4{
+  width:400px;
+  border:1px solid cyan;
+  border-radius:3px;
+  outline:0;
+  padding:7px;
+
+  }
+
+<!--&lt;!&ndash;  h1 {&ndash;&gt;-->
+<!--&lt;!&ndash;   font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;   margin: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+h1{
+    text-align: center;
+    color: #277582;
+    padding: 20px;
 }
-    </style>
+
+<!--&lt;!&ndash;button {&ndash;&gt;-->
+<!--&lt;!&ndash;   border-radius: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;   border: 1px solid #FF4B2B;&ndash;&gt;-->
+<!--&lt;!&ndash;   background-color: orange;&ndash;&gt;-->
+<!--&lt;!&ndash;   color: orange;&ndash;&gt;-->
+<!--&lt;!&ndash;   font-size: 12px;&ndash;&gt;-->
+<!--&lt;!&ndash;   font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;   padding: 10px 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;   letter-spacing: 1px;&ndash;&gt;-->
+<!--&lt;!&ndash;   text-transform: uppercase;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;   transition: transform 10ms ease-in;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+form {
+   background-color: #fff;
+   display: flex;
+   align-items: right;
+   justify-content: right;
+   flex-direction: column;
+   padding: 0 175px;
+   height: 50%;
+   text-align: left;
+   width: 500px;
+}
+
+
+.container{
+   background-color: #fff;
+   border-radius: 10px;
+   position: relative;
+   overflow: hidden;
+   width: 500px;
+   max-width: 100%;
+   min-height: 480px;
+}
+.login {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+form .data label{
+  font-size: 18px;
+}
+
+#login {
+   display: table-cell;
+   text-align: center;
+   vertical-align: center;
+}
+login-form {
+width: 100%;
+top: 0.3em;
+position: absolute;
+z-index: 2;
+}
+
+
+
+
+  </style>
 
 
 
 </head>
-<body style="background-color: orange;">
-<!--<div th:replace="fragments/navbar :: navbar_html"></div>-->
-<!--<div class="container">-->
-<!--    <div th:replace="fragments/message :: message_html"></div>-->
-<!--</div>-->
+<!--<body style="background-color: #fff;">-->
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header"></div>
+<center>
+    <body style="background-image" > <img src="../static/image/jacknjill.jpg" width="500" length="1000" height="500"
+                                          th:src="@{image/jacknjill.jpg}"/>
+</center>
+
+
+
+
 
 <div class="container">
-    <h1>Login</h1>
-    <hr>
+<!--    <center>-->
+<!--        <img src="../static/image/jacknjill.jpg" width="500" length="500" height="500"-->
+<!--             th:src="@{image/jacknjill.jpg}"/>-->
+
+<!--    </center>-->
+
+
+
+
+
+    <!--    <hr>-->
+    <!--    <div class="background-image">-->
+
+    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <h1>Login</h1>
+
     <form  action="login" method="post">
 
+<!--        <div class="form-outline mb-4">-->
         <label for="phone">Phone</label>
-        <input type="number" class="form-control" name="mobile" id="phone" placeholder="phone" maxlength="10">
+        <input type="number" class="form-control" name="mobile" id="phone" placeholder="phone">
 
+<!--        </div>-->
+<!--            <div class="form-outline mb-4">-->
         <label for="inputPassword4">Password</label>
         <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
 
-
+<!--            </div>-->
         <br>
+
         <button id="submit" class="btn btn-primary">Sign in</button>
+
 
     </form>
     <br>
     <form action="register" method="get">
         <button id="" class="btn btn-secondary">Register</button>
     </form>
-</div>
+<!--</div>-->
+
 <!--    </form>-->
 <!--        <form action="register" method="post">-->
 <!--            <label for="message">Message</label>-->
@@ -55,6 +172,13 @@
 <!--            <button id="submit" class="btn btn-primary">Sign in</button>-->
 <!--        </form>-->
 <!--    </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+    </div>
+</div>
+
+
 
 </body>
 <script>
@@ -72,3 +196,5 @@
 <!--    })-->
 </script>
 </html>
+
+
