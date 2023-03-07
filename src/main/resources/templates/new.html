@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <html xmlns:th="http://www.thymeleaf.org"></html>
 
 
@@ -17,112 +17,139 @@
 
 
   <title></title>
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-   body {
-  margin: 0;
-  padding: 0;
-  background: url("../static/image/jacknjill.jpg);
-  background-size: cover;
-  font-family: sans-serif;
+body {
+  font-family: 'Poppins', sans-serif;
+  background:
 }
 
-.loginBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 350px;
-  height: 420px;
-  padding: 70px 40px;
+.btn {
+  transition-duration: 0.4s;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  width: 9.7%;
+  padding: 8px 16px;
+  outline: none;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+   border: 1px solid #4CAF50;
+}
+
+.clear {
+   transition-duration: 0.4s;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  width: 19.8%;
+  padding: 8px 16px;
+  margin-top: 10px;
+  outline: none;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+   border: 1px solid #4CAF50;
+
 }
 
-.user {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: calc(-100px/2);
-  left: calc(50% - 50px);
-}
-
-h2 {
-  margin: 0;
-  padding: 0 0 26px;
-  color: #ff8c00;
+.container {
   text-align: center;
+/*   -webkit-box-shadow: 10px 10px 5px 0px  rgba(0,0,0,0.53);
+ -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53); */
 }
 
-.loginBox p {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: #fff;
+.clear:hover {
+  background-color: #4CAF50;
+  color: white;
+
 }
 
-.loginBox input {
-  width: 100%;
-  margin-bottom: 20px;
+.btn:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
-.loginBox input[type="email"],
-.loginBox input[type="password"] {
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
+input[type=number] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
 }
 
-::placeholder
-{
-  color: rgba(255, 255, 255, 0.5);
+
+input[type=number] {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+/*   border: 2px solid pink; */
+}
+input[type=number]:focus{
+	border: 1px solid #0C0;
 }
 
-.loginBox input[type="submit"] {
-  border: none;
-  outline: none;
-  height: 40px;
-  color: #eee;
-  font-size: 16px;
-  background-color: #FF8C00;
-  cursor: pointer;
-  border-radius: 20px;
-  margin: 12px 0 18px;
-}
 
-.loginBox input[type="submit"]:hover {
-  background-color: #ff9719;
-  color: #fff;
-}
-
-.loginBox a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-}
   </style>
-</head>
-
 <body>
-<div class="loginBox">
-  <img class="user" src="../static/image/jacknjill.jpg">
-  <div class="container">
-  <h2>Log In </h2>
+<body>
+<div class="container">
   <form>
-    <p>Email</p>
-    <input type="email" name="email" placeholder="Enter Email" required>
-    <p>Password</p>
-    <input type="password" name="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-    <input type="submit" name="sign-in" value="Sign In">
-    <a href="#">Forget Password</a>
-  </form>
+    <h1>GPA CALCULATOR</h1><br>
+    <input
+            type="number"
+            class="scores"
+            placeholder="Enter your score here"
+            required
+    ><br />
+    <input
+            type="number"
+            class="units"
+            placeholder="Enter your course unit here"
+            required
+    <
+    <br>
+    <button class='btn calculate'>Calculate</button>
+    <button class='btn add'>Add</button><br>
+    <button class='clear'>Reset</button><br>
+
+    <p id="showcase"></p>
 </div>
+</form>
+</body>
+
 </body>
 </html>

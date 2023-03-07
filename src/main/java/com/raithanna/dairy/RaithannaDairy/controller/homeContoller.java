@@ -20,7 +20,12 @@ public class homeContoller {
     @Autowired
     private UserModelRepository userModelRepository;
     @GetMapping("/")
-    public String loginHtml(){ return "login";}
+    public String loginHtml(){ return "welcomescreen";}
+
+    @PostMapping("/loginPage")
+    public String loginPage(){ return "loginPage";}
+
+
     @PostMapping("/")
     public String login(@RequestParam String mobile, Model model, @RequestParam String password, HttpServletRequest request, HttpSession session){
         System.out.println(mobile);

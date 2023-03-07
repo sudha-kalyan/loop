@@ -271,17 +271,16 @@ form {
   </style>
 </head>
 <body style="background-color: orange;">
-
+<!--    <div th:replace="fragments/navbar :: navbar_html"></div>-->
+<!--    <div class="container">-->
+<!--        <div th:replace="fragments/message :: message_html"></div>-->
+<!--    </div>-->
     <div class="container">
-
         <p>
             <button type="button" class="btn btn-default btn-sm">
-                <a href="/">
                 <span class="glyphicon glyphicon-arrow-left"></span> Home
-                </a>
             </button>
         </p>
-
         <h3>Register</h3>
 
         <hr>
@@ -313,7 +312,13 @@ form {
                 <label for="inputCity">City</label>
                 <input type="text" class="form-control" name="city" id="inputCity">
 
+<!--               <div class="option">-->
+<!--                <label for="inputState4">State</label>-->
+<!--                <select id="inputState4" class="form-control" name="state">-->
+<!--                    <option >Telengana</option>-->
+<!--                    <option>Andhra pradesh</option>-->
 
+<!--                </select>-->
                    <label for="inputState">State</label>
                    <div class="select">
                        <select id="inputstate" class="form-control" name="state">
@@ -334,13 +339,11 @@ form {
 <!--                </label>-->
 <!--            </div>-->
 <!--        </div>-->
-
         <br>
                        <form action="register" method="get">
                            <button id="" class="btn btn-primary">Register</button>
                        </form>
                    </div>
-
     </form>
 
 
@@ -357,7 +360,6 @@ form {
 <!--            <button id="submit" class="btn btn-primary">Sign in</button>-->
 <!--        </form>-->
 <!--    </div>-->
-
 
 </body>
 <script>
