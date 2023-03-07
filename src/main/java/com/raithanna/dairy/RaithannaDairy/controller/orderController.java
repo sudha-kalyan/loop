@@ -99,7 +99,7 @@ public class orderController {
         List messages = new ArrayList<>();
         messages.add("Login First");
         model.addAttribute("messages", messages);
-        return "redirect:/login";
+        return "redirect:/loginPage";
     }
 
     @PostMapping("/getproductValues")
@@ -227,7 +227,7 @@ public class orderController {
         List messages = new ArrayList<>();
         messages.add("Login First");
         model.addAttribute("messages", messages);
-        return "redirect:/login";
+        return "redirect:/loginPage";
     }
     @PostMapping(value = "/updateOrder")
     public ModelAndView updateOrder(Model model, @RequestBody List<dailySales> orderList, HttpSession session) {
@@ -265,14 +265,14 @@ public class orderController {
 
             //return "redirect:/order/view/63";
             //return new ModelAndView("/order/view/63");
-            return new ModelAndView("/login");
+            return new ModelAndView("/loginPage");
 
         }
         List messages = new ArrayList<>();
         messages.add("Login First");
         model.addAttribute("messages", messages);
         //return "redirect:/login";
-        return new ModelAndView("/login");
+        return new ModelAndView("/loginPage");
     }
 
 
@@ -336,14 +336,14 @@ public class orderController {
 
             //return "redirect:/order/view/63";
             //return new ModelAndView("/order/view/63");
-            return new ModelAndView("/login");
+            return new ModelAndView("/loginPage");
 
         }
         List messages = new ArrayList<>();
         messages.add("Login First");
         model.addAttribute("messages", messages);
         //return "redirect:/login";
-        return new ModelAndView("/login");
+        return new ModelAndView("/loginPage");
     }
 
 
